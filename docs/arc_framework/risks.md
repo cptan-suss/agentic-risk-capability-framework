@@ -89,7 +89,7 @@ Safety hazards involve risks to **human well-being, social harm, and the respons
 
 ## The Risk Register
 
-The **Risk Register** consolidates all risks identified through the ARC Framework and **serves as the organization's reference list of safety and security risks for agentic systems**. 
+The **Risk Register** consolidates all risks identified through the ARC Framework and **serves as the organisation's reference list of safety and security risks for agentic systems**. 
 
 Each risk in the register should:
 

@@ -11,7 +11,7 @@
 
 !!! info "Major Update"
 
-    We have significantly updated the ARC Framework since our initial release in August 2025. The main changes include:
+    We have significantly updated the ARC Framework since our initial release in August. The main changes include:
 
     - **Updated theoretical foundations**: Added a comprehensive [introduction](arc_framework/introduction.md) with design rationale, literature review, real-world case studies (Replit, Antigravity incidents), as well as detailed justifications for the capability-based approach
     - **Restructured documentation**: Consolidated Components and Design elements together with the Capabilities element into a unified [Elements](arc_framework/elements.md) reference page with clearer taxonomy and detailed definitions
@@ -76,4 +76,4 @@ Alternatively, you may use the APA-formatted citation below:
 
 > GovTech Singapore (2025) Agentic Risk & Capability Framework. URL <https://govtech-responsibleai.github.io/agentic-risk-capability-framework/>
 
-*This page was last updated on 23 Dec 2025*
+*This page was last updated on 29 Dec 2025*
