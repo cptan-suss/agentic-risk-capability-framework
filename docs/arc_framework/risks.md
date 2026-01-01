@@ -9,10 +9,6 @@ In this section, we explain how risks materialise from the [elements of an agent
 1. **Failure modes**, which outline *how* the system fails.
 2. **Hazards**, which describe the *resulting impact*.
 
-<figure style="text-align: center;">
-  <img src="../../assets/elements.jpeg" alt="Elements of Agentic Systems" style="width: min(900px, 80%); display: block; margin: 0 auto;">
-</figure>
-
 We then describe the **Risk Register**, which serves as the organisation's central repository of risks relating to agentic systems.
 
 ---
