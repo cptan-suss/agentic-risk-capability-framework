@@ -1,0 +1,1 @@
+Azure env vars correctly NOT defined in code (LiteLLM reads from environment)
