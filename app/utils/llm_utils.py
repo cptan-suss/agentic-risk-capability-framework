@@ -3,12 +3,15 @@
 import streamlit as st
 import json
 import re
+from dotenv import load_dotenv
 import os
 import requests
 from typing import Dict, List, Any, Tuple
 from litellm import completion
 from models.schemas import CapabilityAnalysis, CapabilityEvaluation, RiskAnalysis, SessionKeys
 
+# Load environment variables from .env file
+load_dotenv()
 # Environment variable configuration for LLM models
 ARC_LLM_CAPABILITY_MODEL = os.environ.get("ARC_LLM_CAPABILITY_MODEL", "gpt-4o")
 ARC_LLM_RISK_MODEL = os.environ.get("ARC_LLM_RISK_MODEL", "gpt-5")
