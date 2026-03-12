@@ -1,0 +1,7 @@
+ARC_LLM_CAPABILITY_MODEL: gpt-4o
+ARC_LLM_RISK_MODEL: gpt-5
+ARC_LLM_REPO_MODEL: gpt-5.1-codex
+ARC_LLM_DESCRIPTION_MODEL: gpt-4o-mini
+AZURE_OPENAI_API_KEY defined in code: False
+AZURE_OPENAI_ENDPOINT defined in code: False
+AZURE_OPENAI_API_VERSION defined in code: False

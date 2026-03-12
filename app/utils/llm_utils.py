@@ -3,10 +3,17 @@
 import streamlit as st
 import json
 import re
+import os
 import requests
 from typing import Dict, List, Any, Tuple
 from litellm import completion
 from models.schemas import CapabilityAnalysis, CapabilityEvaluation, RiskAnalysis, SessionKeys
+
+# Environment variable configuration for LLM models
+ARC_LLM_CAPABILITY_MODEL = os.environ.get("ARC_LLM_CAPABILITY_MODEL", "gpt-4o")
+ARC_LLM_RISK_MODEL = os.environ.get("ARC_LLM_RISK_MODEL", "gpt-5")
+ARC_LLM_REPO_MODEL = os.environ.get("ARC_LLM_REPO_MODEL", "gpt-5.1-codex")
+ARC_LLM_DESCRIPTION_MODEL = os.environ.get("ARC_LLM_DESCRIPTION_MODEL", "gpt-4o-mini")
 
 
 def get_llm_capability_analysis(application_info: Dict[str, Any], capabilities: Dict[str, Any]) -> CapabilityAnalysis:
@@ -75,7 +82,7 @@ The "evaluations" array must contain exactly {len(capability_ids)} objects, one 
         message_placeholder = st.empty()
 
         response = completion(
-            model="gpt-4o",  # Use more capable model for systematic evaluation
+            model=ARC_LLM_CAPABILITY_MODEL,  # Use more capable model for systematic evaluation
             messages=[{"role": "user", "content": prompt}],
             response_format={"type": "json_object"},
             temperature=0  # Deterministic for consistency
@@ -225,7 +232,7 @@ Remember:
         message_placeholder = st.empty()
 
         response = completion(
-            model="gpt-5",  # Use more capable model for better structured output reliability
+            model=ARC_LLM_RISK_MODEL,  # Use more capable model for better structured output reliability
             messages=[{"role": "user", "content": prompt}],
             response_format={"type": "json_object"},
         )
@@ -465,7 +472,7 @@ Be specific to the observed files. If something is not evident, state the assump
 
     try:
         response = completion(
-            model="gpt-5.1-codex",
+            model=ARC_LLM_REPO_MODEL,
             messages=[{"role": "user", "content": prompt}],
             stream=True,
         )
@@ -522,7 +529,7 @@ Keep language tight and avoid repetition. Do not add a title or headings in the 
 
     try:
         response = completion(
-            model="gpt-4o-mini",
+            model=ARC_LLM_DESCRIPTION_MODEL,
             messages=[{"role": "user", "content": prompt}],
             stream=True
         )
