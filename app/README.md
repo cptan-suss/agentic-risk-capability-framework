@@ -143,6 +143,51 @@ The application follows a modular architecture:
 
 The application uses LiteLLM to integrate with various LLM providers. By default, it uses GPT-4o-mini, but you can modify the model in the `get_llm_capability_analysis`, `get_llm_risk_analysis`, and `get_application_description` functions in `utils/llm_utils.py`.
 
+## Environment Variables
+
+The application supports flexible LLM configuration through environment variables. You can configure different models for different analysis tasks and optionally use Azure OpenAI.
+
+### Model Configuration Variables
+
+| Variable | Default | Purpose |
+|----------|---------|---------|
+| `ARC_LLM_CAPABILITY_MODEL` | `gpt-4o` | Model for capability analysis |
+| `ARC_LLM_RISK_MODEL` | `gpt-5` | Model for risk assessment |
+| `ARC_LLM_REPO_MODEL` | `gpt-5.1-codex` | Model for repository analysis |
+| `ARC_LLM_DESCRIPTION_MODEL` | `gpt-4o-mini` | Model for description generation |
+
+### Azure OpenAI Support
+
+To use Azure OpenAI instead of direct OpenAI API, set the following variables:
+
+| Variable | Description |
+|----------|-------------|
+| `AZURE_OPENAI_API_KEY` | Azure OpenAI API key (optional, enables Azure when set) |
+| `AZURE_OPENAI_ENDPOINT` | Azure OpenAI endpoint URL |
+| `AZURE_OPENAI_API_VERSION` | API version (default: `2024-12-01-preview`) |
+
+When using Azure, set the `ARC_LLM_*` variables to `azure/your-deployment-name` format.
+
+### Example Configurations
+
+**OpenAI (default):**
+```bash
+OPENAI_API_KEY=sk-...
+# ARC_LLM_* variables use defaults above
+```
+
+**Azure OpenAI:**
+```bash
+AZURE_OPENAI_API_KEY=your-azure-key
+AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
+AZURE_OPENAI_API_VERSION=2024-12-01-preview
+
+ARC_LLM_CAPABILITY_MODEL=azure/gpt-4o
+ARC_LLM_RISK_MODEL=azure/gpt-5
+ARC_LLM_REPO_MODEL=azure/gpt-5.1-codex
+ARC_LLM_DESCRIPTION_MODEL=azure/gpt-4o-mini
+```
+
 ## Error Handling
 
 Comprehensive error handling is implemented throughout:

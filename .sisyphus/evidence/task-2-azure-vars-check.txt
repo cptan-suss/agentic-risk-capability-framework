@@ -1,0 +1,4 @@
+2
+2
+2
+All Azure vars found
