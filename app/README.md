@@ -162,9 +162,9 @@ To use Azure OpenAI instead of direct OpenAI API, set the following variables:
 
 | Variable | Description |
 |----------|-------------|
-| `AZURE_OPENAI_API_KEY` | Azure OpenAI API key (optional, enables Azure when set) |
-| `AZURE_OPENAI_ENDPOINT` | Azure OpenAI endpoint URL |
-| `AZURE_OPENAI_API_VERSION` | API version (default: `2024-12-01-preview`) |
+| `AZURE_API_KEY` | Azure OpenAI API key (optional, enables Azure when set) |
+| `AZURE_API_BASE` | Azure OpenAI endpoint URL |
+| `AZURE_API_VERSION` | API version (default: `2024-12-01-preview`) |
 
 When using Azure, set the `ARC_LLM_*` variables to `azure/your-deployment-name` format.
 
@@ -178,9 +178,9 @@ OPENAI_API_KEY=sk-...
 
 **Azure OpenAI:**
 ```bash
-AZURE_OPENAI_API_KEY=your-azure-key
-AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
-AZURE_OPENAI_API_VERSION=2024-12-01-preview
+AZURE_API_KEY=your-azure-key
+AZURE_API_BASE=https://your-resource.openai.azure.com/
+AZURE_API_VERSION=2024-12-01-preview
 
 ARC_LLM_CAPABILITY_MODEL=azure/gpt-4o
 ARC_LLM_RISK_MODEL=azure/gpt-5
