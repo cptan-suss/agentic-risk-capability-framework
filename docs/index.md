@@ -11,12 +11,12 @@
 
 !!! info "Major Update"
 
-    We have significantly updated the ARC Framework since our initial release in August 2025. The main changes include:
+    We have significantly updated the ARC Framework since our initial release in August. The main changes include:
 
     - **Updated theoretical foundations**: Added a comprehensive [introduction](arc_framework/introduction.md) with design rationale, literature review, real-world case studies (Replit, Antigravity incidents), as well as detailed justifications for the capability-based approach
     - **Restructured documentation**: Consolidated Components and Design elements together with the Capabilities element into a unified [Elements](arc_framework/elements.md) reference page with clearer taxonomy and detailed definitions
     - **Interactive Risk Register**: Introduced a [filterable, searchable risk register](arc_framework/risk-register.md) consolidating all 46 risks and 88 controls with risk-to-control mappings in a single interactive interface
-    - **Framework positioning**: Added a [comparison table](arc_framework/comparison.md) benchmarking ARC against NIST AI RMF, ISO 42001, EU AI Act, OWASP, and other governance frameworks
+    - **Framework positioning**: Added a [comparison table](arc_framework/comparison.md) benchmarking ARC against NIST AI RMF, EU AI Act, Dimensional Governance, OWASP Agentic AI, Google SAIF 2.0, CSA MAESTRO, and other governance frameworks
     - **Enhanced implementation guidance**: Updated implementation guides with more detailed methodologies for both organizational adoption and per-system assessment
     - **ARCvisor tool**: Launched [ARCvisor](resources/index.md#arcvisor), an AI-powered risk assessment assistant achieving 50%+ time savings with live demo and open-source repository
     - **Research publications**: Published two technical papers available in [Resources](resources/index.md) — the ARC Framework paper (accepted at IASEAI 2026) and the ARCvisor preprint
@@ -30,7 +30,7 @@ On this website, you'll find all the resources you need to get started with unde
 - **[Agentic System Elements](arc_framework/elements.md)** — Detailed examination of components, design, and capabilities
 - **[Capability Taxonomy](arc_framework/elements.md#capabilities)** — Cognitive, interaction, and operational capability categories with definitions
 - **[Risk Register](arc_framework/risk-register.md)** — Component, design, and capability-specific risks with impact/likelihood assessment
-- **[Comparison Table](arc_framework/comparison.md)** — Comparison to NIST AI RMF, ISO 42001, EU AI Act, OWASP, and other frameworks
+- **[Comparison Table](arc_framework/comparison.md)** — Comparison to NIST AI RMF, EU AI Act, Dimensional Governance, OWASP Agentic AI, Google SAIF 2.0, and CSA MAESTRO
 
 ### 🛠️ Implementation Guides
 - **[Implementation Overview](implementation/index.md)** — Macro and micro implementation levels, timelines, and resources
@@ -76,4 +76,4 @@ Alternatively, you may use the APA-formatted citation below:
 
 > GovTech Singapore (2025) Agentic Risk & Capability Framework. URL <https://govtech-responsibleai.github.io/agentic-risk-capability-framework/>
 
-*This page was last updated on 23 Dec 2025*
+*This page was last updated on 29 Dec 2025*

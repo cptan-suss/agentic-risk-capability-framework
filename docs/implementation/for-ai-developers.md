@@ -266,11 +266,11 @@ Based on the capability taxonomy, this system demonstrates:
 
 | Category | Capability | Explanation |
 |----------|-----------|-------------|
-| Cognitive | CAP-01: Reasoning and Problem-Solving | The Codebase Analyzer debugs issues by analyzing stack traces, code flow, and dependencies; Code Writer applies software engineering patterns. |
-| Cognitive | CAP-02: Planning and Goal Management | The Task Planner breaks down complex coding requests into sequential steps (e.g., "add authentication" → analyze existing auth, design schema, implement endpoints, write tests). |
-| Cognitive | CAP-03: Tool Use and Delegation | The Task Planner selects appropriate agents and tools based on task requirements (search vs. read vs. execute). |
+| Cognitive | CAP-01: Planning and Goal Management | The Task Planner breaks down complex coding requests into sequential steps (e.g., "add authentication" → analyze existing auth, design schema, implement endpoints, write tests). |
+| Cognitive | CAP-02: Agent Delegation | The Task Planner assigns subtasks to specialized agents (Codebase Analyzer, Code Writer, Command Executor, File Manager) and coordinates their activities. |
+| Cognitive | CAP-03: Tool Use | The Task Planner selects appropriate tools based on task requirements (search vs. read vs. execute). |
 | Interaction | CAP-04: Multimodal Understanding and Generation | All agents process code, markdown documentation, and configuration files; Code Writer generates syntactically correct code in multiple languages. |
-| Operational | CAP-09: Code Execution | The Command Executor runs shell commands, executes tests, installs dependencies, and validates code changes. |
+| Operational | CAP-10: Code Execution | The Command Executor runs shell commands, executes tests, installs dependencies, and validates code changes. |
 | Operational | CAP-11: File and Data Management | The File Manager reads source files, writes modifications, creates new files, and manages version control operations. |
 
 #### Step 2: Evaluate Risks
@@ -343,9 +343,8 @@ Based on the capability taxonomy, this system demonstrates:
 
 | Category | Capability | Explanation |
 |----------|-----------|-------------|
-| Cognitive | CAP-01: Reasoning and Problem-Solving | The Conversation Manager interprets customer intent from natural language queries and resolves ambiguous requests. |
-| Cognitive | CAP-02: Planning and Goal Management | The Conversation Manager plans multi-step interactions (e.g., "reschedule appointment" → check existing booking, find availability, confirm new time, update system). |
-| Cognitive | CAP-03: Tool Use and Delegation | The Conversation Manager selects appropriate agents based on query type (information vs. transaction vs. customer data lookup). |
+| Cognitive | CAP-01: Planning and Goal Management | The Conversation Manager plans multi-step interactions (e.g., "reschedule appointment" → check existing booking, find availability, confirm new time, update system). |
+| Cognitive | CAP-02: Agent Delegation | The Conversation Manager assigns tasks to specialized agents (Knowledge Agent, Booking Agent, Profile Agent) based on query type. |
 | Interaction | CAP-04: Multimodal Understanding and Generation | All agents process natural language queries and generate conversational responses; system handles phone audio transcription. |
 | Operational | CAP-09: Other Programmatic Interfaces | The Booking Agent integrates with appointment scheduling APIs; Profile Agent queries CRM systems. |
 | Operational | CAP-11: File and Data Management | The Knowledge Agent retrieves from product documentation and policy databases; Profile Agent accesses customer records. |
