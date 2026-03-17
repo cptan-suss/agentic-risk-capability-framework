@@ -143,6 +143,30 @@ The application follows a modular architecture:
 
 The application uses LiteLLM to integrate with various LLM providers. By default, it uses GPT-4o-mini, but you can modify the model in the `get_llm_capability_analysis`, `get_llm_risk_analysis`, and `get_application_description` functions in `utils/llm_utils.py`.
 
+## Environment Variables
+
+The application supports flexible LLM configuration through environment variables. You can optionally configure different models for different analysis tasks and use Azure OpenAI.
+
+### Model Configuration Variables
+
+| Variable | Default | Purpose |
+|----------|---------|---------|
+| `ARC_LLM_CAPABILITY_MODEL` | `gpt-4o` | Model for capability analysis |
+| `ARC_LLM_RISK_MODEL` | `gpt-5` | Model for risk assessment |
+| `ARC_LLM_REPO_MODEL` | `gpt-5.1-codex` | Model for repository analysis |
+| `ARC_LLM_DESCRIPTION_MODEL` | `gpt-4o-mini` | Model for description generation |
+
+### Azure OpenAI Support
+
+To use Azure OpenAI instead of direct OpenAI API, set the following variables:
+
+| Variable | Description |
+|----------|-------------|
+| `AZURE_API_KEY` | Azure OpenAI API key |
+| `AZURE_API_BASE` | Azure OpenAI endpoint URL |
+
+When using Azure, set the `ARC_LLM_*` variables to `azure/your-deployment-name` format.
+
 ## Error Handling
 
 Comprehensive error handling is implemented throughout:
